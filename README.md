@@ -1,6 +1,6 @@
 # AgroFarm
 
-Agro Farm is a web application that will help the Farmer perform agro Marketing Leading to achieve success and increase their Standard of Living.
+kulima Farm is a web application that will help the Farmer perform agro Marketing Leading to achieve success and increase their Standard of Living.
 On this Website, we will get to know each and every detail about Farming and can ask the query if required.
 
 Tech Used:
