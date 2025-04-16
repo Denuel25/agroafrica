@@ -1,12 +1,15 @@
 {
   "name": "agroafrica",
   "version": "1.0.0",
-  "description": "Agro Farm is a web application that will help the Farmer perform agro Marketing Leading to achieve success and increase their Standard of Living.\r On this Website, we will get to know each and every detail about Farming and can ask the query if required.",
+  "description": "Agro Farm is a web application that will help the Farmer perform agro Marketing Leading to achieve success and increase their Standard of Living.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"No tests yet\" && exit 0"
+    "test": "jest"
   },
   "keywords": [],
   "author": "Denuel25",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
 }
