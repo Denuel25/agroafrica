@@ -4,9 +4,9 @@
   "description": "Agro Farm is a web application that will help the Farmer perform agro Marketing Leading to achieve success and increase their Standard of Living.\r On this Website, we will get to know each and every detail about Farming and can ask the query if required.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"No tests yet\" && exit 0"
   },
   "keywords": [],
-  "author": "",
+  "author": "Denuel25",
   "license": "ISC"
 }
