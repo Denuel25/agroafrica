@@ -4,6 +4,7 @@
   "description": "Agro Farm is a web application that will help the Farmer perform agro Marketing Leading to achieve success and increase their Standard of Living.",
   "main": "index.js",
   "scripts": {
+    "start": "react-scripts start",
     "test": "jest"
   },
   "keywords": [],
@@ -19,6 +20,19 @@
   },
   "dependencies": {
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "react-scripts": "^5.0.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
