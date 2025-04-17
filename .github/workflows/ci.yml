@@ -1,28 +1,36 @@
-name: CI
+name: Node.js CI
 
 on:
   push:
-    branches: [main]
+    branches: [ main ]
   pull_request:
-    branches: [main]
+    branches: [ main ]
 
 jobs:
-  build:
+  build-and-test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+    - name: ⬇️ Checkout repository
+      uses: actions/checkout@v3
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '20'
+    - name: 🧱 Use Node.js from .nvmrc
+      uses: actions/setup-node@v3
+      with:
+        node-version-file: '.nvmrc'
+        cache: 'npm'
 
-      - name: Install dependencies
-        run: npm install
-        working-directory: ./agroafrica  # 👈 Points to nested folder
+    - name: 🧹 Clean old modules & install fresh
+      run: |
+        rm -rf node_modules package-lock.json
+        npm cache clean --force
+        npm install
 
-      - name: Run tests
-        run: npm test
-        working-directory: ./agroafrica  # 👈 Also here
+    - name: ✅ Run Tests
+      run: npm test
+
+    - name: 🐞 Print logs if failure
+      if: failure()
+      run: |
+        echo "📄 Printing NPM logs..."
+        cat /home/runner/.npm/_logs/*.log || echo "No logs found."
