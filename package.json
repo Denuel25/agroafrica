@@ -5,11 +5,14 @@
   "main": "index.js",
   "scripts": {
     "start": "react-scripts start",
+    "build": "react-scripts build",
+    "deploy": "npm run build && git subtree push --prefix build origin gh-pages",
     "test": "jest"
   },
   "keywords": [],
   "author": "Denuel25",
   "license": "ISC",
+  "homepage": "https://Denuel25.github.io/agroafrica",
   "devDependencies": {
     "@eslint/js": "^9.24.0",
     "eslint": "^9.24.0",
